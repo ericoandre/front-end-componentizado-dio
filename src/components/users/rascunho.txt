@@ -1,0 +1,13 @@
+import React from "react";
+import * as S from "./styled";
+
+import { useGithub } from "../../hooks/githubHooks";
+
+export default function User() {
+    const { githubState } = useGithub();
+    return(
+        <S.Conteiner>
+            <h1>Nome: {githubState.user.name}</h1>
+        </S.Conteiner>
+    );
+};
